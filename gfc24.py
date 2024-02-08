@@ -98,7 +98,6 @@ def check_for_duplicate_id(user_id: int, file_path: str = "user_ids.tbot") -> bo
             existing_ids = file.read().splitlines()
             logging.info(str(existing_ids))
         return str(user_id) in existing_ids
-        # [1523978922], [234816044]
     except FileNotFoundError:
         return False  # No file yet, so no duplicates
     except TypeError as e:
